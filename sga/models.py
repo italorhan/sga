@@ -6,6 +6,8 @@ class Licenca(models.Model):
     fornecedor = models.CharField(max_length=200, blank=True, null=True)
     licenca = models.CharField(max_length=200, blank=True, null=True)
     quantidade = models.IntegerField(blank=False, null=False)
+    quantidade_utilizada = models.IntegerField(blank=True, null=True)
+    quantidade_disponivel = models.IntegerField(blank=True, null=True)
     data_aquisicao = models.DateField(blank=False, null=False)
     data_expiracao = models.DateField(blank=True, null=True)
     valor_unitario = models.FloatField(blank=False, null=False)
