@@ -18,6 +18,7 @@ class Licenca(models.Model):
     data_aquisicao = models.DateField(blank=True, null=True)
     data_expiracao = models.DateField(blank=True, null=True)
     valor_unitario = models.FloatField(blank=False, null=False)
+    foto = models.ImageField(upload_to='licenca/', blank=True, null=True)
 
     def __str__(self):
         return self.nome
